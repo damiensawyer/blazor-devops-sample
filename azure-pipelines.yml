@@ -57,7 +57,9 @@ steps:
 - bash: |
     dotnet build $(solution) \
     --configuration $(buildConfiguration) \
-    --arch $(buildPlatform) \
+    # --arch $(buildPlatform) \
+    --runtime $(buildPlatform) \
+    --self-contained \
     -v normal \
     --no-restore 
   displayName: Build
