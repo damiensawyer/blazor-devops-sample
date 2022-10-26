@@ -1,0 +1,19 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SAM.Web/v17
+/SAM.Web/Client/bin/Debug/net6.0
+/SAM.Web/Client/obj
+/SAM.Web/Server/bin/Debug/net6.0
+/SAM.Web/Server/.config
+/SAM.Web/Server/obj
+/SAM.Web/Shared/bin/Debug/net6.0
+/SAM.Web/Shared/obj
+/.vs/SAM.Web/DesignTimeBuild/.dtbcache.v2
+/SAM.Web.DataAccess/bin/Debug/net6.0
+/SAM.Web.DataAccess/obj
+**/.vs
+**/bin
+**/obj
+**/SAM.Web.sln.DotSettings.user
