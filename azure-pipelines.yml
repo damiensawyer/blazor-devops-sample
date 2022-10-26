@@ -77,7 +77,7 @@ steps:
     dotnet publish $(serverProject) \
     --output publish \
     --self-contained \
-    --arch x86 
+    --arch x64 
   displayName: publish
   workingDirectory: $(workingDirectory)
 
