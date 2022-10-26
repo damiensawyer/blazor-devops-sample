@@ -29,9 +29,21 @@ steps:
     feedsToUse: 'select'
     noCache: false
 
-- script: dotnet build $(solution) --configuration $(buildConfiguration) --platform $(buildPlatform) -v normal
+- script: |
+    dotnet build $(solution) 
+    --configuration $(buildConfiguration) 
+    --platform $(buildPlatform) 
+    -v normal
+    --no-restore
   displayName: Build
   workingDirectory: $(workingDirectory)
+
+- script: |
+    dotnet publish $(solution) 
+     --no-build
+  displayName: publish
+  workingDirectory: $(workingDirectory)
+
 
 # - task: NuGetToolInstaller@1
 
