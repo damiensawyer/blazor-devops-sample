@@ -43,6 +43,11 @@ steps:
 #     noCache: false
 
 - script: |
+    dotnet restore $(solution) 
+  displayName: Restore
+  workingDirectory: $(workingDirectory)
+
+- script: |
     dotnet build $(solution) 
     --configuration $(buildConfiguration) 
     --platform $(buildPlatform) 
