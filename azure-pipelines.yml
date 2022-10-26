@@ -62,7 +62,8 @@ steps:
     # --arch $(buildPlatform) \
     #--runtime $(buildPlatform) \
     #--self-contained \
-    --no-restore 
+    --no-restore
+    --verbosity normal 
   displayName: Build
   workingDirectory: $(workingDirectory)
 
