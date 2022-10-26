@@ -59,10 +59,7 @@ steps:
 - bash: |
     dotnet build $(solution) \
     --configuration $(buildConfiguration) \
-    # --arch $(buildPlatform) \
-    #--runtime $(buildPlatform) \
-    #--self-contained \
-    --no-restore
+    --no-restore \
     --verbosity normal 
   displayName: Build
   workingDirectory: $(workingDirectory)
