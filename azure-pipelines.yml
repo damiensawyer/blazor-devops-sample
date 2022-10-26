@@ -58,8 +58,8 @@ steps:
     dotnet build $(solution) \
     --configuration $(buildConfiguration) \
     # --arch $(buildPlatform) \
-    --runtime $(buildPlatform) \
-    --self-contained \
+    #--runtime $(buildPlatform) \
+    #--self-contained \
     -v normal \
     --no-restore 
   displayName: Build
