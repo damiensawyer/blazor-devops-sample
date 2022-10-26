@@ -55,10 +55,10 @@ steps:
 #   workingDirectory: $(workingDirectory)
 
 - bash: |
-    dotnet build $(solution)\
-    --configuration $(buildConfiguration)\
-    --platform $(buildPlatform)\
-    -v normal\
+    dotnet build $(solution) \
+    --configuration $(buildConfiguration) \
+    --platform $(buildPlatform) \
+    -v normal \
     --no-restore 
   displayName: Build
   workingDirectory: $(workingDirectory)
