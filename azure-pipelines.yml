@@ -49,10 +49,20 @@ steps:
   displayName: Restore
   workingDirectory: $(workingDirectory)
 
-- script: |
-    dotnet build $(solution) --configuration $(buildConfiguration) --platform $(buildPlatform) -v normal --no-restore 
+# - script: |
+#     dotnet build $(solution) --configuration $(buildConfiguration) --platform $(buildPlatform) -v normal --no-restore 
+#   displayName: Build
+#   workingDirectory: $(workingDirectory)
+
+- bash: |
+    dotnet build $(solution)\
+    --configuration $(buildConfiguration)\
+    --platform $(buildPlatform)\
+    -v normal\
+    --no-restore 
   displayName: Build
   workingDirectory: $(workingDirectory)
+
 
 - script: |
     dotnet publish $(solution) --no-build
