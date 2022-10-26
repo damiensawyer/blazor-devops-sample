@@ -25,7 +25,7 @@ steps:
     packageType: 'sdk' # 'runtime' | 'sdk'. Package to install. Default: sdk.
     #useGlobalJson: false # boolean. Optional. Use when packageType = sdk. Use global json. Default: false.
     #workingDirectory: # string. Optional. Use when useGlobalJson = true. Working Directory. 
-    #version: # string. Optional. Use when useGlobalJson = false || packageType = runtime. Version. 
+    version: '6.0.110' # string. Optional. Use when useGlobalJson = false || packageType = runtime. Version. 
     #includePreviewVersions: false # boolean. Optional. Use when useGlobalJson = false  || packageType = runtime. Include Preview Versions. Default: false.
   # Advanced
     #vsVersion: # string. Compatible Visual Studio version. 
