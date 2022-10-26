@@ -81,6 +81,13 @@ steps:
   displayName: publish
   workingDirectory: $(workingDirectory)
 
+- script: |
+    dotnet test \
+    --output test-output \
+  displayName: test
+  workingDirectory: $(workingDirectory)
+
+
 # - task: NuGetToolInstaller@1
 
 # - task: NuGetCommand@2
@@ -94,7 +101,3 @@ steps:
 #     platform: '$(buildPlatform)'
 #     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
