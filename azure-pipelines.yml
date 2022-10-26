@@ -54,13 +54,14 @@ steps:
 #   displayName: Build
 #   workingDirectory: $(workingDirectory)
 
+
+# Note below, you can only specify arch (or runtime, not both) and self-contained if you build a single project. Perhaps do them separately.
 - bash: |
     dotnet build $(solution) \
     --configuration $(buildConfiguration) \
     # --arch $(buildPlatform) \
     #--runtime $(buildPlatform) \
     #--self-contained \
-    -v normal \
     --no-restore 
   displayName: Build
   workingDirectory: $(workingDirectory)
