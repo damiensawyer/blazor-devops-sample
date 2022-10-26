@@ -50,16 +50,16 @@ steps:
   workingDirectory: $(workingDirectory)
 
 - script: |
-    dotnet build $(solution) 
-      --configuration $(buildConfiguration) 
-      --platform $(buildPlatform) 
-      -v normal
-      --no-restore
+    dotnet build $(solution) \ 
+      --configuration $(buildConfiguration) \ 
+      --platform $(buildPlatform) \
+      -v normal \
+      --no-restore \
   displayName: Build
   workingDirectory: $(workingDirectory)
 
 - script: |
-    dotnet publish $(solution) 
+    dotnet publish $(solution) \ 
       --no-build
   displayName: publish
   workingDirectory: $(workingDirectory)
