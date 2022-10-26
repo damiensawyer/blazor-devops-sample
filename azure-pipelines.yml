@@ -12,6 +12,7 @@ pool:
 
 variables:
   solution: 'simplesite.sln'
+  serverProject: './Server/simplesite.Server.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   workingDirectory: '$(Build.SourcesDirectory)'
@@ -65,11 +66,20 @@ steps:
   workingDirectory: $(workingDirectory)
 
 
+# - script: |
+#     dotnet publish $(solution) \
+#     --output publish
+#   displayName: publish
+#   workingDirectory: $(workingDirectory)
+
+
 - script: |
-    dotnet publish $(solution) --no-build
+    dotnet publish $(serverProject) \
+    --output publish \
+    --self-contained \
+    --arch x86 
   displayName: publish
   workingDirectory: $(workingDirectory)
-
 
 # - task: NuGetToolInstaller@1
 
